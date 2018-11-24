@@ -1,6 +1,6 @@
-# sharing_book
+# sharebnb
 
-> A Vue.js project
+> This is my first Vue.js project. Simply to say, it's the book management system.
 
 ## Build Setup
 
