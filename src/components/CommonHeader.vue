@@ -8,9 +8,6 @@
     <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
             <b-nav-item>
-                <router-link to="/booklists" class="borrow-list">Borrorw</router-link>
-            </b-nav-item>
-            <b-nav-item>
                 <router-link to="/mylist" class="my-list">MyList</router-link>
             </b-nav-item>
         </b-navbar-nav>
@@ -18,7 +15,7 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
             <b-nav-item>
-                <router-link to="/mylist" class="cart">Cart</router-link>
+                <router-link to="/mycart" class="cart">Cart</router-link>
             </b-nav-item>
             <b-nav-item-dropdown right>
                 <!-- Using button-content slot -->
@@ -40,7 +37,7 @@ export default {
     name: 'CommonHeader',
     data() {
         return {
-            title: 'Share BnB'
+            title: 'Sharebnb'
         }
     }
 }

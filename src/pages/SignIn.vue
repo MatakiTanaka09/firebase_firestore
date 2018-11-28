@@ -9,7 +9,9 @@
 
 
 <script>
+import firebaseApp from '@/api/firebase/firebase'
 import firebase from 'firebase'
+// import FirebaseAuth from '@/api/firebase/firebaseAuth'
 
 export default {
     name: 'SignIn',

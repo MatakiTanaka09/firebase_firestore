@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import commonHeader from '@/views/CommonHeader'
+import commonHeader from '@/components/CommonHeader'
 
 export default {
     name: 'App',

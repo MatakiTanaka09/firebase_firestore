@@ -1,17 +1,12 @@
-import firestore from "@./api/firebase/firestore"
+import firestore from "@/api/firebase/firestore"
 
-firestore.collection('books').get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
-        let data = {
-            id: doc.id,
-            name: doc.data().name,
-            description: doc.data().description,
-            borrowable: doc.data().borrowable
-        }
-        this.booksData.push(data)
-    });
-});
+const db = {
+    fetchAllBooksData: function(data) {
+        return firestore.getBooksAllData(data)
+    }
+}
 
+export default db
 
 // function saveImageMessage(file) {
 //     // TODO 9: Posts a new image as a message.

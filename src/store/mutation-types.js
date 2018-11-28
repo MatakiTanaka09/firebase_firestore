@@ -1,4 +1,7 @@
 export const FETCH_ALL_BOOK = 'FETCH_ALL_BOOK'
+export const CHANGE_BORROWABLE = 'CHANGE_BORROWABLE'
+export const SET_BOOK_QUERY = 'SET_BOOK_QUERY'
+export const SET_BOOKLISTS = 'SET_BOOKLISTS'
 export const ADD_BOOK = 'ADD_BOOK'
 export const UPDATE_BOOK = 'UPDATE_BOOK'
 export const REMOVE_BOOK = 'REMOVE_BOOK'

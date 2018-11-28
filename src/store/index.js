@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import store from '@/store/store'
-
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-    actions,
-    getters,
-    modules: {
-        store
-    }
-})
+// import Vue from 'vue'
+// import Vuex from 'vuex'
+// import bookList from '@/store/store'
+//
+// Vue.use(Vuex)
+//
+// const store = new Vuex.Store({
+//     modules: {
+//         bookList: bookList
+//     }
+// })
+//
+// export default store

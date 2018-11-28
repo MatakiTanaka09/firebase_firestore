@@ -1,8 +1,8 @@
-import BookLists from '@/views/BookLists'
-import SignIn from '@/views/SignIn'
-import Select from '@/views/Select'
-import MyList from '@/views/MyList'
-import BookDetail from '@/views/BookDetail'
+import BookLists from '@/pages/BookLists'
+import BookDetail from '@/pages/BookDetail'
+import MyList from '@/pages/MyList'
+import MyCart from '@/pages/MyCart'
+import SignIn from '@/pages/SignIn'
 
 export default [
         {
@@ -34,15 +34,15 @@ export default [
             meta: { requiresAuth: true }
         },
         {
-            path: '/select',
-            name: 'Select',
-            component: Select,
-            meta: { requiresAuth: true }
-        },
-        {
             path: '/mylist',
             name: 'MyList',
             component: MyList,
+            meta: { requiresAuth: true }
+        },
+        {
+            path: '/mycart',
+            name: 'MyCart',
+            component: MyCart,
             meta: { requiresAuth: true }
         },
 ]
