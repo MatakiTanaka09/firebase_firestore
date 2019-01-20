@@ -1,12 +1,17 @@
-import firestore from "@/api/firebase/firestore"
+// import Firestore from "@/api/firebase/firestore"
+//
+// export default {
+//     fetchAllBooksData() {
+//         return Firestore.getBooksAllData()
+//     }
+// }
 
-const db = {
-    fetchAllBooksData: function(data) {
-        return firestore.getBooksAllData(data)
-    }
-}
-
-export default db
+// const db = {
+//     fetchAllBooksData: function(data) {
+//         return firestoreApp.getBooksAllData(data)
+//     }
+// }
+// export default db
 
 // function saveImageMessage(file) {
 //     // TODO 9: Posts a new image as a message.

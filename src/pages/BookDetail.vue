@@ -1,34 +1,44 @@
 <template>
 <div>
-    <b-img class="" src="https://picsum.photos/1024/400/?image=41" fluid alt="Responsive image" />
-    <h3 class="my-4">{{ detail.title }}</h3>
-        <!-- <b&#45;button class="review&#45;btn" variant="outline&#45;success">Review</b&#45;button> -->
-        <!-- <b&#45;button class="moreDetail&#45;btn" variant="outline&#45;primary">Books&#45;Info</b&#45;button> -->
-        <!-- <b&#45;button class="favorite&#45;btn" variant="outline&#45;warning">Star</b&#45;button> -->
-    <p class="my-5">{{ detail.description }}</p>
-    <p @click="done">Done</p>
-    <router-link to="/booklists/">戻る</router-link>
+    <!-- <b&#45;img class="" src="https://picsum.photos/1024/400/?image=41" fluid alt="Responsive image" /> -->
+    <h3 class="my-4">{{ bookDetail.title }}</h3>
+    <p class="my-5">{{ bookDetail.description }}</p>
+    <b-button v-if="bookDetail.borrowable" class="borrow-btn" size="" variant="outline-primary">
+        Borrow
+    </b-button>
+    <b-button v-if="!bookDetail.borrowable" class="borrow-btn" size="" variant="outline-secondary" disabled>
+        {{ user }}さんがBorrow...
+    </b-button>
+    <b-button class="borrow-btn" size="" variant="outline-warning">
+        Cart in
+    </b-button>
+    <router-link to="/booklists" class="d-block text-dark mt-4">戻る</router-link>
 </div>
 
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import Firebase from '@/api/firebase/firebase'
+import Firestore from '@/api/firebase/firestore'
 
 export default {
-    data () {
-        return {
-            dataDetail: []
-        }
-    },
-    created () {
-        this.dataDetail = this.$store.state.data.find(wl => wl.id === this.$route.params.id)
-    },
     computed: {
-        ...mapGetters(['detail'])
+        bookDetail() {
+            return this.$store.getters.searchBookById(this.$route.params.id)
+        },
+        user() {
+            return this.$store.getters.user.displayName
+        },
     },
     methods: {
-        ...mapActions(['done'])
+        ...mapActions({
+            changeBorrowable: 'changeBorrowable',
+            setQueryParams: 'setQueryParams'
+        }),
+        // borrow() {
+        //     Firestore.setBorrowLog(this.$route.params.id, this.$store.getters.user.uid)
+        // }
     }
 }
 </script>

@@ -35,5 +35,5 @@ class FirebaseAuth
 }
 
 const firebaseAuth = new FirebaseAuth();
-export default console.log(firebaseAuth.onAuthStateChanged());
+export default firebaseAuth
 

@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import commonHeader from '@/components/CommonHeader'
+import CommonHeader from '@/components/CommonHeader'
 
 export default {
     name: 'App',
     components: {
-        'commonHeader': commonHeader
+        'commonHeader': CommonHeader
     }
 }
 </script>

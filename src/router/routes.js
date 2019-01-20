@@ -1,22 +1,22 @@
 import BookLists from '@/pages/BookLists'
 import BookDetail from '@/pages/BookDetail'
 import MyList from '@/pages/MyList'
-import MyCart from '@/pages/MyCart'
-import SignIn from '@/pages/SignIn'
+import Cart from '@/pages/Cart'
+import StartApp from '@/pages/StartApp'
 
 export default [
         {
             path: '*',
-            redirect: 'signin'
+            redirect: 'startapp'
         },
         {
             path: '/',
-            redirect: 'signin'
+            redirect: 'startapp'
         },
         {
-            path: '/signin',
-            name: 'SignIn',
-            component: SignIn
+            path: '/startapp',
+            name: 'StartApp',
+            component: StartApp
         },
         {
             path: '/booklists',
@@ -40,9 +40,18 @@ export default [
             meta: { requiresAuth: true }
         },
         {
-            path: '/mycart',
-            name: 'MyCart',
-            component: MyCart,
+            path: '/cart',
+            name: 'Cart',
+            component: Cart,
             meta: { requiresAuth: true }
         },
+        // {
+        //     path: '/cart/:uid',
+        //     name: 'MyCart',
+        //     component: Cart,
+        //     props: route => ({
+        //         uid: Number(route.params.uid)
+        //     }),
+        //     meta: { requiresAuth: true }
+        // },
 ]
